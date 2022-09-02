@@ -22,7 +22,6 @@ jobs:
           node-version: 16.x
           cache: "npm"
       - run: npm run bundle
-      - run: npm run build --if-present
 
       - name: Deploy theme in production
         uses: up9cloud/action-rsync@master
