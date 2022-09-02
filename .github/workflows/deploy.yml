@@ -31,4 +31,5 @@ jobs:
           HOST: ${{secrets.HOST}}
           KEY: ${{secrets.SSH_PRIVATE_KEY}}
           TARGET: ${{secrets.TARGET}}
+          SOURCE: ./bundle
           VERBOSE: true
