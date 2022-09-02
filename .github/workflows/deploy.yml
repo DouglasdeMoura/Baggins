@@ -1,0 +1,32 @@
+name: Deploy WordPress theme
+
+on:
+  push:
+    branches: [$default-branch]
+
+jobs:
+  bundle:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo "🎉 Bundling WordPress theme"
+
+      - name: Checkout repository code
+        uses: actions/checkout@v3
+
+      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          cache: "npm"
+      - run: npm run bundle
+      - run: npm run build --if-present
+
+      - name: Deploy theme in production
+        uses: up9cloud/action-rsync@master
+        env:
+          HOST: ${{secrets.HOST}}
+          KEY: ${{secrets.SSH_PRIVATE_KEY}}
+          TARGET: ${{secrets.TARGET}}
