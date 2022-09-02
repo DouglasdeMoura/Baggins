@@ -25,11 +25,11 @@ jobs:
       - run: npm run bundle
 
       - name: Deploy theme in production
-        uses: up9cloud/action-rsync@master
-        env:
-          USER: ${{secrets.USER}}
-          HOST: ${{secrets.HOST}}
-          KEY: ${{secrets.SSH_PRIVATE_KEY}}
-          TARGET: ${{secrets.TARGET}}
-          SOURCE: ./bundle
-          VERBOSE: true
+        uses: burnett01/rsync-deployments@5.2.1
+        with:
+          switches: -avzr --delete
+          path: bundle
+          remote_path: ${{secrets.TARGET}}
+          remote_host: ${{secrets.HOST}}
+          remote_user: ${{secrets.USER}}
+          remote_key: ${{secrets.DEPLOY_KEY}}
