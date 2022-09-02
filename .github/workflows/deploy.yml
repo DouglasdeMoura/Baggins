@@ -27,6 +27,8 @@ jobs:
       - name: Deploy theme in production
         uses: up9cloud/action-rsync@master
         env:
+          USER: ${{secrets.USER}}
           HOST: ${{secrets.HOST}}
           KEY: ${{secrets.SSH_PRIVATE_KEY}}
           TARGET: ${{secrets.TARGET}}
+          VERBOSE: true
