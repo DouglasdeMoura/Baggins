@@ -53,7 +53,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 
 // Import variables and mixins.
-// @import "abstracts/abstracts";
+@import "abstracts/abstracts";
 
 /*--------------------------------------------------------------
 # Generic
@@ -101,4 +101,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 /* Alignments
 --------------------------------------------- */
-// @import "utilities/alignments";
+@import "utilities/alignments";
+
+img {
+	max-width: 100%;
+	height: auto;
+}

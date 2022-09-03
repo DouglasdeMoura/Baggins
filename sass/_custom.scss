@@ -41,6 +41,11 @@
 .site-main {
   @extend .column;
   @extend .content;
+
+  figure {
+    @extend .image;
+    @extend .is-fullwidth;
+  }
 }
 
 .entry-header {
