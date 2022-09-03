@@ -206,6 +206,22 @@
   }
 }
 
+.search-form {
+  @extend .mb-6;
+}
+
+.search-field {
+  @extend .input;
+}
+
+.search-submit {
+  display: none;
+}
+
+.columns .widget {
+  @extend .column;
+}
+
 /*--------------------------------------------------------------
 # Sidebar
 --------------------------------------------------------------*/
