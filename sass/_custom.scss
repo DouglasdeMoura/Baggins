@@ -5,6 +5,36 @@
 }
 
 /*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.site-header {
+  @extend .navbar;
+  @extend .is-warning;
+  @extend .mb-6;
+}
+
+.site-brand {
+  @extend .navbar-brand;
+}
+
+.site-title {
+  @extend .is-size-5;
+  @extend .has-text-weight-bold;
+}
+
+.nav-menu {
+  @extend .navbar-menu;
+
+  li {
+    @extend .navbar-item;
+  }
+}
+
+.menu-toggle {
+  @extend .is-hidden-desktop;
+}
+
+/*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
 
