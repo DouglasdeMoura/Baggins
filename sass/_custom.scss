@@ -1,12 +1,40 @@
 @import "bulma";
 
 /*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+
+.site-main {
+  @extend .column;
+  @extend .content;
+}
+
+.entry-header {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+}
+
+.entry-title {
+  @extend .title;
+}
+
+.single .hentry {
+  margin-bottom: 3rem;
+}
+
+.widget-area {
+  @extend .column;
+  @extend .is-one-third;
+}
+
+/*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 .site-footer {
   @extend .footer;
 }
 
-.site-infor {
+.site-info {
   @extend .container;
 }
