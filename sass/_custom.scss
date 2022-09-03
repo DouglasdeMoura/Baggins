@@ -23,9 +23,44 @@
   margin-bottom: 3rem;
 }
 
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
 .widget-area {
   @extend .column;
   @extend .is-one-third;
+}
+
+.wp-block-search {
+  &__label {
+    @extend .menu-label;
+  }
+
+  &__input {
+    @extend .input;
+  }
+
+  &__inside-wrapper {
+    @extend .control;
+  }
+
+  &__button {
+    display: none;
+  }
+}
+
+/*--------------------------------------------------------------
+# Sidebar
+--------------------------------------------------------------*/
+
+.widget-area {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.widget h2 {
+  @extend .menu-label;
 }
 
 /*--------------------------------------------------------------
