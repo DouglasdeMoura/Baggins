@@ -25,22 +25,70 @@
 
 .entry-footer {
   @extend .my-6;
+  @extend .is-flex;
+  gap: 1rem;
+}
+
+.comments-link,
+.edit-link,
+.tag-links a,
+.cat-links a {
+  @extend .button;
+  @extend .is-small;
 }
 
 .edit-link {
-  @extend .button;
   @extend .is-info;
   @extend .is-light;
-  @extend .is-small;
   @extend .ml-4;
 }
 
 .tag-links a,
 .cat-links a {
-  @extend .button;
   @extend .is-primary;
   @extend .is-light;
-  @extend .is-small;
+}
+
+/*--------------------------------------------------------------
+# Comments
+--------------------------------------------------------------*/
+.comment-form label {
+  @extend .label;
+}
+
+.comment-form-comment,
+.comment-form-author,
+.comment-form-email,
+.comment-form-url,
+.comment-form-cookies-consent {
+  @extend .control;
+
+  input:not([type="checkbox"]) {
+    @extend .input;
+  }
+}
+
+.comment-form-comment {
+  textarea {
+    @extend .textarea;
+  }
+}
+
+.comment-form-cookies-consent {
+  @extend .is-flex;
+
+  input {
+    @extend .mr-4;
+  }
+}
+
+.form-submit {
+  @extend .control;
+}
+
+.submit {
+  @extend .button;
+  @extend .is-primary;
 }
 
 /*--------------------------------------------------------------
