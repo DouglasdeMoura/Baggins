@@ -11,8 +11,8 @@
 
 .entry-header {
   border-bottom: 1px solid #ccc;
-  margin-bottom: 3rem;
-  padding-bottom: 3rem;
+  @extend .mb-6;
+  @extend .pb-6;
 }
 
 .entry-title {
@@ -20,7 +20,27 @@
 }
 
 .single .hentry {
-  margin-bottom: 3rem;
+  @extend .mb-6;
+}
+
+.entry-footer {
+  @extend .my-6;
+}
+
+.edit-link {
+  @extend .button;
+  @extend .is-info;
+  @extend .is-light;
+  @extend .is-small;
+  @extend .ml-4;
+}
+
+.tag-links a,
+.cat-links a {
+  @extend .button;
+  @extend .is-primary;
+  @extend .is-light;
+  @extend .is-small;
 }
 
 /*--------------------------------------------------------------
