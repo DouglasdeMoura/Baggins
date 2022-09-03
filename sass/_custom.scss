@@ -88,6 +88,45 @@
   @extend .is-light;
 }
 
+.post-navigation {
+  @extend .mb-6;
+
+  .nav-subtitle {
+    @extend .is-sr-only;
+  }
+
+  .nav-title {
+    word-wrap: break-word;
+  }
+
+  .nav-links {
+    @extend .columns;
+
+    & .nav-previous,
+    & .nav-next {
+      @extend .column;
+    }
+
+    & .nav-previous a,
+    & .nav-next a {
+      @extend .button;
+      @extend .is-light;
+      @extend .is-link;
+      @extend .py-5;
+    }
+
+    & .nav-next {
+      @extend .is-flex;
+      @extend .is-justify-content-flex-end;
+    }
+
+    & .nav-previous {
+      @extend .is-flex;
+      @extend .is-justify-content-flex-start;
+    }
+  }
+}
+
 /*--------------------------------------------------------------
 # Comments
 --------------------------------------------------------------*/
