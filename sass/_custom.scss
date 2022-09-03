@@ -48,6 +48,17 @@
   }
 }
 
+.hentry {
+  & label {
+    @extend .label;
+  }
+
+  & input:not([type="checkbox"]),
+  & input:not([type="radio"]) {
+    @extend .input;
+  }
+}
+
 .entry-header {
   border-bottom: 1px solid #ccc;
   @extend .mb-6;
