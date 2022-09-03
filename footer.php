@@ -13,17 +13,9 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'baggins' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'baggins' ), 'WordPress' );
-				?>
+			<a href="https://douglasmoura.dev/">
+				&copy; <?php echo date('Y') ?> Douglas Moura
 			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'baggins' ), 'baggins', '<a href="https://douglasmoura.dev">Douglas Moura</a>' );
-				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
