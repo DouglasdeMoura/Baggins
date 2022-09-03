@@ -1,4 +1,6 @@
 vendor
 node_modules
-bundle
+baggins
 .vscode
+data
+.env
