@@ -4,3 +4,4 @@ baggins
 .vscode
 data
 .env
+*.map
