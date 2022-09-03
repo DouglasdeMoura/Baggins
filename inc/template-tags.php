@@ -60,14 +60,14 @@ if ( ! function_exists( 'baggins_entry_footer' ) ) :
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'baggins' ) );
+			$categories_list = get_the_category_list( __( '<span class="screen-reader-text">, </span>', 'baggins' ) );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
 				printf( '<span class="cat-links">' . __( '<span class="screen-reader-text">Posted in</span> %1$s', 'baggins' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'baggins' ) );
+			$tags_list = get_the_tag_list( '', _x( '<span class="screen-reader-text">, </span>', 'list item separator', 'baggins' ) );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
 				printf( '<span class="tags-links">' . __( '<span class="screen-reader-text">Tagged</span> %1$s', 'baggins' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped

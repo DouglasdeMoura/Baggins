@@ -79,9 +79,16 @@
   gap: 1rem;
 }
 
+.cat-links,
+.tags-links {
+  @extend .is-flex;
+  @extend .is-flex-wrap-wrap;
+  gap: 0.5rem;
+}
+
 .comments-link,
 .edit-link,
-.tag-links a,
+.tags-links a,
 .cat-links a {
   @extend .button;
   @extend .is-small;
@@ -93,7 +100,7 @@
   @extend .ml-4;
 }
 
-.tag-links a,
+.tags-links a,
 .cat-links a {
   @extend .is-primary;
   @extend .is-light;
